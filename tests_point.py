@@ -166,7 +166,7 @@ class Test_point(unittest.TestCase) :
         pA = Point(10, 10)
         factor = 10
         pA.rescale(factor)
-        expected = (1, 1)
+        expected = (100, 100)
         result = (pA.get_abs(), pA.get_ord())
         self.assertEqual(expected, result)
         
@@ -178,7 +178,7 @@ class Test_point(unittest.TestCase) :
             
     def test_rescale_3(self) :
         pA = Point(100, -100)
-        factor = 0.5
+        factor = 2
         with self.assertRaises(ValueError) :
             pA.rescale(factor)
 
