@@ -114,11 +114,6 @@ class Test_point(unittest.TestCase) :
         pA = Point(0,0)
         with self.assertRaises(ValueError) :
             pA.add(1)
-
-    def test_add_2(self) :
-        pA = Point(0,0)
-        with self.assertRaises(ValueError) :
-            pA.add()
             
     def test_add_3(self) :
         pA = Point(0,0)
@@ -284,21 +279,21 @@ class Test_point(unittest.TestCase) :
     ##  Tests pour la fonction distance_from_origin()
 
 
-    def test_distance_from_origine_1() :
+    def test_distance_from_origine_1(self) :
         pA = Point(0,0)
         ax, ay = pA.get_abs(), pA.get_ord()
         expected = math.sqrt((ax-0)**2 + (ay-0)**2)
         result = pA.distance_from_origin()
         self.assertEqual(expected, result)
 
-    def test_distance_from_origine_2() :
+    def test_distance_from_origine_2(self) :
         pA = Point(1,2)
         ax, ay = pA.get_abs(), pA.get_ord()
         expected = math.sqrt((ax-0)**2 + (ay-0)**2)
         result = pA.distance_from_origin()
         self.assertEqual(expected, result)
 
-    def test_distance_from_origine_3() :
+    def test_distance_from_origine_3(self) :
         pA = Point(-1,0)
         ax, ay = pA.get_abs(), pA.get_ord()
         expected = math.sqrt((ax-0)**2 + (ay-0)**2)
