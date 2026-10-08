@@ -288,21 +288,21 @@ class Test_point(unittest.TestCase) :
         pA = Point(0,0)
         ax, ay = pA.get_abs(), pA.get_ord()
         expected = math.sqrt((ax-0)**2 + (ay-0)**2)
-        result = pA.manhattan_distance()
+        result = pA.distance_from_origin()
         self.assertEqual(expected, result)
 
     def test_distance_from_origine_2() :
         pA = Point(1,2)
         ax, ay = pA.get_abs(), pA.get_ord()
         expected = math.sqrt((ax-0)**2 + (ay-0)**2)
-        result = pA.manhattan_distance()
+        result = pA.distance_from_origin()
         self.assertEqual(expected, result)
 
     def test_distance_from_origine_3() :
         pA = Point(-1,0)
         ax, ay = pA.get_abs(), pA.get_ord()
         expected = math.sqrt((ax-0)**2 + (ay-0)**2)
-        result = pA.manhattan_distance()
+        result = pA.distance_from_origin()
         self.assertEqual(expected, result)
 
 
