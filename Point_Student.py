@@ -16,13 +16,18 @@ Entry : x and y coordonate of a point.
 class Point:
   ### Initialization ###
   def __init__(self, x = 0.00, y = 0.00):
-    self._abs = x 
+    self._abs = x
     self._ord = y
+
+    # Raise ValueError if coordonate is None or a str()
+    if self._abs is None or self._ord is None:
+      raise ValueError("L'ordonné ou l'abscise ne peut pas être None")
+    if self._abs is str() or self._ord is str():
+      raise ValueError("L'ordonné ou l'abscise ne peut pas être un str()")
 
   ### Print Method ###
   def __str__(self):
-    s = "Point of coordinates ({:.4f}, {:.4f})".format(self.get_abs(), self.get_ord())
-    return(s)
+    return "Point of coordinates ({}, {})".format(round(self.get_abs(), 4), round(self.get_ord(), 4))
 
   ### Acceseurs ###
   def get_abs(self):
