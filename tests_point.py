@@ -173,19 +173,19 @@ class Test_point(unittest.TestCase) :
     def test_rescale_2(self) :
         pA = Point(10, 10)
         factor = "ABC"
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.rescale(factor)
             
     def test_rescale_3(self) :
         pA = Point(100, -100)
         factor = 0.5
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.rescale(factor)
 
     def test_rescale_4(self) :
         pA = Point(100, -100)
         factor = None
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.rescale(factor)
 
 
@@ -194,17 +194,17 @@ class Test_point(unittest.TestCase) :
     
     def test_euclidean_distance_1(self) :
         pA = Point(1,1)
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.euclidean_distance("ABC")
         
     def test_euclidean_distance_2(self) :
         pA = Point(1,1)
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.euclidean_distance(None)
         
     def test_euclidean_distance_3(self) :
         pA = Point(1,1)
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.euclidean_distance(180)
 
     def test_euclidean_distance_4(self) :
@@ -240,17 +240,17 @@ class Test_point(unittest.TestCase) :
     
     def test_manhattan_distance_1(self) :
         pA = Point(1,1)
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.manhattan_distance("ABC")
         
     def test_manhattan_distance_2(self) :
         pA = Point(1,1)
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.manhattan_distance(None)
         
     def test_manhattan_distance_3(self) :
         pA = Point(1,1)
-        with self.assertRaise(ValueError) :
+        with self.assertRaises(ValueError) :
             pA.manhattan_distance(180)
 
     def test_manhattan_distance_4(self) :
